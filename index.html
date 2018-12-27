@@ -1,188 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="utf-8">
+      <meta  charset="utf-8">
+      <link href="styles/all_style.css" rel="stylesheet">
       <title>SpaceX</title>
   </head>
   <body>
-    <div id="header" class="row">
-        <div id="block-crew" class="block">
-            <div class="block-text">
-                <small class="block-label">Crew</small>
-                <div class="block-title">DRAGON</div>
-            </div>
-        </div>
-        <div id="block-perigee" class="block">
-            <div class="block-text">
-                <small class="block-label">Perigee</small>
-                <div class="block-title">185.013m</div>
-            </div>
-            <div class="block-icon">
-                <i class="icon icon-arrow-minus"></i>
-            </div>
-        </div>
-        <div id="block-apogee" class="block">
-            <div class="block-text">
-                <small class="block-label">Apogee</small>
-                <div class="block-title">360.304m</div>
-            </div>
-            <div class="block-icon">
-                <i class="icon icon-arrow-minus"></i>
-            </div>
-        </div>
-        <div id="block-relative-altitude" class="block">
-            <div class="block-text">
-                <small class="block-label">Relative Altitude</small>
-                <div class="block-title">50.948m</div>
-            </div>
-            <div class="block-icon">
-                <i class="icon icon-arrow-bottom"></i>
-            </div>
-        </div>
-        <div id="range-to-iss-block" class="block">
-            <div class="block-text">
-                <small class="block-label">Range to ISS</small>
-                <div class="block-title">625.713m</div>
-            </div>
-            <div class="block-icon">
-                <i class="icon icon-arrow-bottom"></i>
-            </div>
-        </div>
-    </div>
-    <div id="planet-view" class="row">
-        <img src="https://fedplanchoncom.files.wordpress.com/2018/04/mars-spin.gif?w=800" alt="Mars spin.gif">
-    </div>
-    <div id="current-time" class="row">
-        <div class="block">
-            <small class="small">Day 131</small>
-            <div class="time large">13:46:11</div>
-        </div>
-        <div class="block">
-            <div id="speed-chart">chart</div>
-        </div>
-        <div class="block">
-            <div class="">
-                <div class="">Next Burn</div>
-                <div class="">Enable</div>
-            </div>
-            <div class="">-0:05:48</div>
-            <div class="">
-                <div class="">13:52:00</div>
-                <div class="">DAY 131</div>
-            </div>
-        </div>
-        <div class="block">
-            <div class="">
-                <div class="">Target  V</div>
-                <div class=""></div>
-            </div>
-            <div class="">
-                <div class="">33.5 m/s</div>
-            </div>
-            <div class="">
-                <div class="">Thruster Temps</div>
-            </div>
-        </div>
-    </div>
-    <div id="alarms" class="row">
-        <div class="">
-            0 ALARMS
-        </div>
-        <div class="">
-            <div class="">
-                ALL SYSTEMS NOMINAL
-            </div>
-            <div class="">
-                check mark
-            </div>
-        </div>
-    </div>
-    <div id="next-actions" class="row">
-        <div class="">
-            <div class="">
-                <div class="">-0:08:24</div>
-                <div class="">Next LOS (00:03:17)</div>
-                <div class="">
-                    <div>13:54:36</div>
-                    <div>DAY 131</div>
-                </div>
-            </div>
-            <div class="">
-                <div class="">-02:51:02</div>
-                <div class="">Estimated ISS Arrival</div>
-                <div class="">
-                    <div>16:37:15</div>
-                    <div>DAY 131</div>
-                </div>
-            </div>
-        </div>
-        <div class="">
-            <div>
-                <div>-0:23:23</div>
-                <div>Next Deorbit Window Pacific</div>
-                <div>
-                    <div>14:09:36</div>
-                    <div>DAY 131</div>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <div>Current Breakout</div>
-                    <div>Retrograde</div>
-                </div>
-                <div>V = 5.0 m/s</div>
-            </div>
-        </div>
-    </div>
-    <div id="schedule" class="row">
-        <div class="">
-            <div>Schedule</div>
-            <div>ALL EVENTS</div>
-            <div>V</div>
-        </div>
-        <div class="">
-            <div>
-                <div>13:10:00</div>
-                <div>13:37:00</div>
-                <div>13:46:45</div>
-                <div>13:52:10</div>
-            </div>
-            <div>slider</div>
-            <div>
-                <div>Rendezvous Burn GO/NO-GO</div>
-                <div>Prepare for rendezvous burn</div>
-                <div>Rendezvous burn slow</div>
-                <div>Rendezvous Burn</div>
-            </div>
-        </div>
-    </div>
-    <div id="rendezvous" class="row">
-        <div class="">
-            <div class="">Rendezvous</div>
-            <div class="">Approach</div>
-        </div>
-        <div class="">
-            <div>Ground</div>
-            <div>TDRS</div>
-            <div>ISS</div>
-            <div>Eclipse</div>
-            <div>Burn</div>
-            <div>Crew</div>
-        </div>
-        <div class="">
-            <div>12:30</div>
-            <div>13:00</div>
-            <div>13:30</div>
-            <div>14:00</div>
-            <div>14:30</div>
-            <div>15:00</div>
-            <div>15:30</div>
-            <div>16:00</div>
-            <div>16:30</div>
-        </div>
-        <div class="">
+  <!-- START page-->
+  <div class="container">
+      <!--START header panel-->
+      <div id="header" class="row">
+          <div id="block-crew" class="block header">
+              <div class="header-text">
+                  <small class="header-title">Crew</small>
+                  <div class="header-value label">DRAGON</div>
+              </div>
+          </div>
+          <div id="block-perigee" class="block header">
+              <div class="header-text">
+                  <small class="header-text">Perigee</small>
+                  <div class="header-value">185.013<span>m</span></div>
+              </div>
+              <div class="header-icon">
+                  <i class="icon icon-minus"></i>
+              </div>
+          </div>
+          <div id="block-apogee" class="block header">
+              <div class="header-text">
+                  <small class="header-text">Apogee</small>
+                  <div class="header-value">360.304<span>m</span></div>
+              </div>
+              <div class="header-icon">
+                  <i class="icon icon-minus"></i>
+              </div>
+          </div>
+          <div id="block-relative-altitude" class="block header">
+              <div class="header-text">
+                  <small class="header-text">Relative Altitude</small>
+                  <div class="header-value">50.948<span>m</span></div>
+              </div>
+              <div class="header-icon">
+                  <span class="icon__arrow-bottom">&#129147;</span>
+              </div>
+          </div>
+          <div id="block-range-to-iss" class="block header">
+              <div class="header-text">
+                  <small class="header-text">Range to ISS</small>
+                  <div class="header-value">625.713<span>m</span></div>
+              </div>
+              <div class="header-icon">
+                  <span class="icon__arrow-bottom">&#129147;</span>
+              </div>
+          </div>
+      </div>
+      <!--END header panel-->
 
-        </div>
-    </div>
-    </body>
+      <!--START Current-time-->
+      <div id="planet-view" class="row image">
+          <img class="image__picture" src="https://fedplanchoncom.files.wordpress.com/2018/04/mars-spin.gif?w=800" alt="Mars spin.gif">
+      </div>
+      <!--END Current-time-->
+
+      <!--START General day&time-->
+      <div class="row general">
+          <div class="general__day">
+              <small class="general__day-title">Day 131</small>
+              <div class="general__day-time">13:46:11</div>
+          </div>
+          <div class="general__values">
+              <div id="chart" class="general__chart">
+                  <div > Chart  </div>
+              </div>
+              <div class="general__next">
+                  <div class="next_burn">
+                      <div class="next_burn__header">
+                          <div class="next_burn__title">Next Burn</div>
+                          <div class="next_burn__status">Enabled</div>
+                      </div>
+                      <div class="next_burn__value">-0:05:48</div>
+                      <div class="next_burn__datetime">
+                          <div class="next_burn__time">13:52:00</div>
+                          <div class="next_burn__day">DAY 131</div>
+                      </div>
+                  </div>
+              </div>
+              <div class="general__target">
+                  <div class="target">
+                      <div class="target__header">Target  V</div>
+                      <div class="target__value">33.5 m/s</div>
+                      <div class="target__status">Thruster Temps</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--END General day&time-->
+      <!--START State of the system-->
+      <div class="row state-system">
+          <div class="state-system__alarms">
+              <span class="state-system__value">0</span>
+              <span class="state-system__text">ALARMS</span>
+          </div>
+          <div class="state-system__status">
+              <span>ALL SYSTEMS NOMINAL</span>
+              <span class="icon-ok">&#10004;</span> <!--<span class=icon-error">&#10006;</span>-->          <!--SYSTEM ERROR ICON-->
+          </div>
+      </div>
+      <!--END State of the system-->
+
+      <!--START Other parameters of shuttle-->
+      <div class="row los">
+          <div class="los__left">
+              <div class="left__next-los">
+                  <div class="next-los__time">-0:08:24</div>
+                  <div class="next-los__label">
+                      <span>Next LOS </span>
+                      <span>(00:03:17)</span>
+                  </div>
+                  <div class="next-los__date-time">
+                      <span class="next-los__time2">13:54:36</span>
+                      <span >DAY 131</span>
+                  </div>
+              </div>
+              <div class="left__estimated">
+                  <div class="left__estimated_time">-02:51:02</div>
+                  <div class="left__estimated_label">
+                      <span>Estimated ISS Arrival</span>
+                  </div>
+                  <div class="left__estimated_date-time">
+                      <span class="left__estimated_time2">16:37:15</span>
+                      <span>DAY 131</span>
+                  </div>
+              </div>
+          </div>
+          <div class="los__right">
+              <div class="los__right_deorbit">
+                  <div class="los__deorbit_time">-00:23:23</div>
+                  <div class="los__deorbit_label">
+                      <span>Next Deorbit Window</span>
+                      <span>Pacific</span>
+                  </div>
+                  <div class="los__deorbit_date-time">
+                      <span class="los__deorbit_time2">14:09:36</span>
+                      <span>DAY 131</span>
+                  </div>
+              </div>
+              <div class="los__breakout">
+                  <div class="los__breakout_left">
+                      <div class="los__breakout_label">Current Breakout</div>
+                      <div class="los__breakout_info">Retrograde</div>
+                  </div>
+                  <div class="los__breakout_value">
+                      <div>
+                          <svg height="14" width="13"><polygon points="7,4 2,13 11,13"/></svg>V = 5.0.m/s
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--END Other parameters of shuttle-->
+      <!--START Schedule-row-->
+      <div class="row schedule">
+          <div class="schedule__header">
+              <span class="schedule__left">Schedule</span>
+              <div class="schedule__right">
+                  <span>ALL EVENTS</span>
+                  <span class="schedule_arrow-down">&or;</span>
+              </div>
+          </div>
+          <div class="schedule__time-of-events">
+              <div class="schedule__time-slider">
+                  <div class="schedule__time">
+                      <span>13:10:00</span>
+                      <span>13:37:00</span>
+                      <span>13:46:45</span>
+                      <span>13:52:10</span>
+                  </div>
+                  <div class="schedule__vertical-slider">
+                      <input type='range' />
+                  </div>
+              </div>
+              <div class="schedule__all-events">
+                  <div class="schedule__rend-go">
+                      <span>Rendezvous Burn GO/NO-GO</span>
+                      <span>Ground</span>
+                  </div>
+                  <div class="schedule__prepare">
+                      <span>Prepare for rendezvous burn</span>
+                      <span>Crew</span>
+                  </div>
+                  <div class="schedule__slow">
+                      <span>Rendezvous burn slow</span>
+                      <span>Dragon</span>
+                  </div>
+                  <div class="schedule__burn">
+                      <span>Rendezvous Burn</span>
+                      <span>Dragon</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--END Schedule-row-->
+      <!--START Table-Rendezvous-Approach-->
+      <div class="grid">
+          <div class="grid__header">
+              <div class="grid__right">Rendezvous</div>
+              <div class="grid__left">Approach</div>
+          </div>
+          <div class="grid__row-elements">
+              <div class="grid__ground">
+                  <div class="grid__element">Ground </div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__approach-block b-1"></div>
+                  <div class="grid__approach-block b-2"></div>
+                  <div class="grid__approach-block b-3"></div>
+                  <div class="grid__approach-block b-4"></div>
+                  <div class="grid__approach-block b-5"></div>
+                  <div class="grid__approach-block b-6"></div>
+                  <div class="grid__approach-block b-7"></div>
+              </div>
+              <div class="grid__ground">
+                  <div class="grid__element">TDRS</div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__approach-block b-8"></div>
+                  <div class="grid__approach-block b-9"></div>
+                  <div class="grid__approach-block b-10 approach-block-current"></div>
+              </div>
+              <div class="grid__ground">
+                  <div class="grid__element">ISS</div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__approach-block b-11"></div>
+                  <div class="grid__approach-block b-12"></div>
+                  <div class="grid__approach-block b-13"></div>
+              </div>
+              <div class="grid__ground">
+                  <div class="grid__element">Eclipse</div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__approach-block b-14"></div>
+                  <div class="grid__approach-block b-15"></div>
+                  <div class="grid__approach-block b-16"></div>
+              </div>
+              <div class="grid__ground">
+                  <div class="grid__element">Burn</div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__approach-block b-15"></div>
+                  <div class="grid__approach-block b-16"></div>
+                  <div class="grid__approach-block b-17"></div>
+              </div>
+              <div class="grid__ground">
+                  <div class="grid__element">Crew</div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__element"></div>
+                  <div class="grid__approach-block b-18"></div>
+                  <div class="grid__approach-block b-19"></div>
+                  <div class="grid__approach-block b-20"></div>
+              </div>
+              <div class="grid__approach-time">
+                  <span class="grid__time"></span>
+                  <span class="grid__time">12:30</span>
+                  <span class="grid__time">13:00</span>
+                  <span class="grid__time">13:30</span>
+                  <span class="grid__time">14:00</span>
+                  <span class="grid__time">14:30</span>
+                  <span class="grid__time">15:00</span>
+                  <span class="grid__time">15:30</span>
+                  <span class="grid__time">16:00</span>
+                  <span class="grid__time">16:30</span>
+              </div>
+              <div class="grid__approach-progress"></div>
+          </div>
+          <div id="progress__row">
+              <div id="progress__value"></div>
+          </div>
+      </div>
+      <!--END Table-Rendezvous-Approach-->
+  </div>
+  </body>
 </html>
